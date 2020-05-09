@@ -98,7 +98,7 @@ public class PageRanker {
                 }
                 rankVector[col] = vertexRank;
                 // print out all the ranks
-                System.out.println(col + ": " + vertexRank);
+                System.out.println("page #" + col + ": " + vertexRank);
             }
             System.out.println("--------------------------------");
         }
@@ -119,6 +119,7 @@ public class PageRanker {
 
         // initial unsorted map of rank values
         Map<Integer, Double> mapVectorsToRanks = new HashMap<>();
+
         // sorted map of rank values
         LinkedHashMap<Integer, Double> sortedMap = new LinkedHashMap<>();
         int index = 0;
@@ -184,7 +185,7 @@ public class PageRanker {
             }
 
         }
-        
+
         /* UNCOMMENT THIS LINE TO SEE PRINTED RANK MATRIX */
        // printMatrix(matrix);
         return matrix;
